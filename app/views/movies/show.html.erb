@@ -1,10 +1,20 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @movie %>
 
-<div>
-  <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
-  <%= link_to "Back to movies", movies_path %>
+<div class="heading"><%= @movie.title %></div>
 
-  <%= button_to "Destroy this movie", @movie, method: :delete %>
+<div class="page">
+  <div class="movie-details">
+    <div>Rating: <%= @movie.rating %></div>
+    <div>Release Date: <%= @movie.release_date.strftime("%b %d, %Y") %></div>
+  </div>
+  <div class="movie-description">
+    <div style="font-weight: 900; padding-top: 5px; font-size: large">Description</div>
+    <%= @movie.description or "N/A" %>
+  </div>
+  <div>
+    <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
+    <%= link_to "Back to movies", movies_path %> | 
+    <%= button_to "Delete this movie", @movie, method: :delete,form: {style: 'display:inline-block;'}, class: "delete-button" %>
+  </div>
 </div>

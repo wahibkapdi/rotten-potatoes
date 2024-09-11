@@ -2,15 +2,22 @@
 
 <% content_for :title, "Movies" %>
 
-<h1>Movies</h1>
+<div class="heading">Rotten Potatoes</div>
 
-<div id="movies">
-  <% @movies.each do |movie| %>
-    <%= render movie %>
-    <p>
-      <%= link_to "Show this movie", movie %>
-    </p>
-  <% end %>
-</div>
+<table class="movies-list">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Rating</th>
+      <th>Release Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+      <%= render movie %>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to "New movie", new_movie_path %>
+<%= link_to "Add a New Movie", new_movie_path, class: "floating-button", id: "add-button" %>

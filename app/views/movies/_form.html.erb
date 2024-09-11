@@ -1,4 +1,4 @@
-<%= form_with(model: movie) do |form| %>
+<%= form_with(model: movie, id: "movie-form") do |form| %>
   <% if movie.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
@@ -11,27 +11,28 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="form-group">
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
-  <div>
+  <div  class="form-group">
     <%= form.label :rating, style: "display: block" %>
     <%= form.text_field :rating %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div>
+  <div  class="form-group">
     <%= form.label :release_date, style: "display: block" %>
     <%= form.text_field :release_date %>
   </div>
 
+  <div  class="form-group">
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description, style: "height: 200px" %>
+  </div>
+
+
   <div>
-    <%= form.submit %>
+    <%= form.submit id: "update-movie" %>
   </div>
 <% end %>
