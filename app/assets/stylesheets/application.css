@@ -34,6 +34,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .page {
@@ -100,12 +101,20 @@ th{
     text-transform:uppercase;
 }
 
-tr td:last-child, tr td:nth-last-child(2), tr td:nth-last-child(3), tr td:nth-last-child(4), tr td:nth-last-child(6), tr td:nth-last-child(7), tr td:nth-last-child(8), tr td:nth-last-child(9){
+th a {
+    color:#2b3c56;
+}
+
+tr td:last-child, tr td:nth-last-child(2), tr td:nth-last-child(3), tr td:nth-last-child(4){
     text-align:center;
 }
 
 tr:hover{
     background-color:#f9f9f9;
+}
+
+th:hover {
+    background-color: #e4ecfe;
 }
 
 .floating-button {
@@ -144,8 +153,12 @@ tr:hover{
 }
 
 .movie-description {
-    padding-bottom: 10px;
     width: 60%;
+    min-height: 200px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .delete-button {
@@ -218,4 +231,22 @@ tr:hover{
 #update-movie:hover {
     color: white;
     background-color: #478036;
+}
+
+.sort-links {
+    display: inline;
+    font-size: small;
+    margin-right: 5px;
+}
+
+.sort-links .active {
+    color:#478036;
+}
+
+.sort-links .inactive {
+    color:#7ca1d8;
+}
+
+.sort-links .inactive:hover {
+    color:#2b3c56;
 }

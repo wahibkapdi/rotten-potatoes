@@ -7,9 +7,27 @@
 <table class="movies-list">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Rating</th>
-      <th>Release Date</th>
+      <th>
+        Title
+        <div class="sort-links">
+          <%= sort_button "title", "asc", "asc" %> |
+          <%= sort_button "title", "desc", "desc" %>
+        </div>
+      </th>
+      <th>
+        Rating
+        <div class="sort-links">
+          <%= sort_button "rating", "asc", "asc" %> |
+          <%= sort_button "rating", "desc", "desc" %>
+        </div>
+      </th>
+      <th>
+        Release Date
+        <div class="sort-links">
+          <%= sort_button "release_date", "asc", "asc" %> |
+          <%= sort_button "release_date", "desc", "desc" %>
+        </div>
+      </th>
       <th>Actions</th>
     </tr>
   </thead>
