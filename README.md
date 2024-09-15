@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This has been forked from my non academic repository.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Final Link: [https://evening-fortress-22724-ca927c868e91.herokuapp.com/movies](https://evening-fortress-22724-ca927c868e91.herokuapp.com/movies)
